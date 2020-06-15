@@ -1,4 +1,5 @@
-﻿using ServiceStack;
+﻿using System;
+using ServiceStack;
 
 namespace MyApp.ServiceModel
 {
@@ -12,5 +13,17 @@ namespace MyApp.ServiceModel
     public class HelloResponse
     {
         public string Result { get; set; }
+    }
+
+    [Route("/Math")]
+    [Route("/Math/{A}{B}")]
+    public class AddUs : IReturn<AddUsResponse>
+    {
+        public Single 
+    }
+
+    public class AddUsResponse
+    {
+        public Single Result { get; set; }
     }
 }
